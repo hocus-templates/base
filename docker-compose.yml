@@ -1,0 +1,15 @@
+version: '3.2'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - home:/home/hocus/
+      - ./scripts:/home/hocus/scripts/
+      - ./env:/home/hocus/env/
+    command: sleep infinity
+
+volumes:
+  home:

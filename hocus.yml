@@ -1,0 +1,15 @@
+# Attach VSCode to this service
+mount_service: app
+
+# Open this directory in VSCode
+mount_dir: /home/hocus/code/
+
+# Specify where the scripts will be in the container
+script_paths:
+  init: /home/hocus/scripts/init.sh
+  shell: /home/hocus/scripts/shell.sh
+
+# Specify where the scripts should be run
+script_workdirs:
+  init: /home/hocus/code/
+  shell: /home/hocus/code/
