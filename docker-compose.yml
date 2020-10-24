@@ -7,8 +7,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - home:/home/hocus/
-      - ./scripts:/home/hocus/scripts/
-      - ./env:/home/hocus/env/
+      - .:/home/hocus/.hocus-mount/
     command: sleep infinity
 
 volumes:

@@ -1,4 +1,4 @@
-# Attach VSCode to this service
+# Attach VSCode to this docker-compose service
 mount_service: app
 
 # Open this directory in VSCode
@@ -6,10 +6,10 @@ mount_dir: /home/hocus/code/
 
 # Specify where the scripts will be in the container
 script_paths:
-  init: /home/hocus/scripts/init.sh
-  shell: /home/hocus/scripts/shell.sh
+  init: /home/hocus/.hocus-mount/scripts/init.sh
+  shell: /home/hocus/.hocus-mount/scripts/shell.sh
 
-# Specify where the scripts should be run
+# Specify the workdirs from which the scripts will be run
 script_workdirs:
   init: /home/hocus/code/
   shell: /home/hocus/code/
