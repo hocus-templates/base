@@ -1,3 +1,2 @@
 volumes/
-.hocus-state.yml
-.env
+.generated
