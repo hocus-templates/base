@@ -1,5 +1,5 @@
 # Get access to environment variables
-set -a && . ~/.hocus-mount/.env && set +a
+set -a && . ~/.hocus-mount/.generated/.env && set +a
 
 # Copy the readme so that the user sees it after they open the project for the first time
 cp ~/.hocus-mount/misc/readme.txt ~/code/readme.txt
