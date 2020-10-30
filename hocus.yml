@@ -7,7 +7,7 @@ mount_dir: /home/hocus/code/
 # Specify where the scripts will be in the container
 script_paths:
   init: /home/hocus/.hocus-mount/scripts/init.sh
-  shell: /home/hocus/.hocus-mount/scripts/shell.sh
+  shell: /home/hocus/.hocus-mount/user/shell.sh
 
 # Specify the workdirs from which the scripts will be run
 script_workdirs:
