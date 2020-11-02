@@ -20,7 +20,4 @@ RUN useradd -ms /bin/bash hocus && \
 
 USER hocus
 RUN mkdir -p /home/hocus/.vscode-server/data/Machine/
-COPY --chown=hocus:hocus ./user/build.sh /home/hocus/build.sh
-RUN echo "pocus" | sudo -S /home/hocus/build.sh && rm /home/hocus/build.sh
-
 WORKDIR /home/hocus/code
