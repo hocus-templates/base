@@ -1,17 +1,17 @@
-FROM debian:buster-slim
+FROM ubuntu:18.04
 RUN apt-get update && apt-get install -y \
-    sudo \
-    git \
-    openssh-client \
-    curl \
-    wget \
+    build-essential \
     ca-certificates \
-    unzip \
-    zip \
+    curl \
+    git \
     less \
-    vim \
     nano \
-    build-essential
+    openssh-client \
+    sudo \
+    unzip \
+    vim \
+    wget \
+    zip
 RUN useradd -ms /bin/bash hocus && \
     usermod -aG sudo hocus && \
     echo 'hocus:pocus' | chpasswd && \
@@ -20,8 +20,6 @@ RUN useradd -ms /bin/bash hocus && \
 
 USER hocus
 RUN mkdir -p /home/hocus/.vscode-server/data/Machine/
-COPY --chown=hocus:hocus ./misc/vscode-settings.json /home/hocus/.vscode-server/data/Machine/settings.json
-
 COPY --chown=hocus:hocus ./user/build.sh /home/hocus/build.sh
 RUN echo "pocus" | sudo -S /home/hocus/build.sh && rm /home/hocus/build.sh
 

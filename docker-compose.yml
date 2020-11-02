@@ -7,7 +7,9 @@ services:
       dockerfile: Dockerfile
     volumes:
       - home:/home/hocus/
+
       - .:/home/hocus/.hocus-mount/
+      - ./user/vscode-settings.json:/home/hocus/.vscode-server/data/Machine/settings.json
     command: sleep infinity
 
 volumes:
